@@ -1,0 +1,8 @@
+
+release-builds
+
+node_modules/*
+
+!node_modules/node-gamepad/*
+
+!node_modules/hyperdeck-js-lib/src/hyperdeck

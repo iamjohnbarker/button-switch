@@ -1,0 +1,32 @@
+{
+  "name": "Button-Switch",
+  "productName": "Button Switch",
+  "version": "0.0.3",
+  "description": "Control your ATEM and HyperDeck with a USB device",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . Button-Switch --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Button Switch\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "john barker",
+  "license": "MIT",
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "applest-atem": "^0.2.4",
+    "electron-json-storage": "^4.0.2",
+    "elgato-stream-deck": "^2.1.1",
+    "homedir": "^0.6.0",
+    "hyperdeck-js-lib": "^1.4.0",
+    "midi": "^0.9.5",
+    "node-gamepad": "^0.1.15",
+    "object-change": "0.0.11",
+    "wirecast-applescript": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-packager": "^11.1.0",
+    "packager": "0.0.4"
+  }
+}
