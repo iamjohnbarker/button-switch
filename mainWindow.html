@@ -105,7 +105,19 @@
 
         <div class="row">
           <div class="col-6">
-            <h2>MIDI Input</h2>
+
+            <h2>Choose your MIDI device</h2>
+            <div class="input-group mb-4">
+              <div class="input-group-prepend">
+                <label id="midiConnectionLED" class="input-group-text" for="inputGroupSelect01"></label>
+              </div>
+              <select class="custom-select" id="midiSelect">
+                <option selected value="none/none">Choose...</option>
+              </select>
+            </div>
+
+            
+            <!-- <h2>MIDI Input</h2>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMidiOff" value="midiInputOff" checked>
               <label class="form-check-label" for="inputMidiOff">Off</label>
@@ -113,7 +125,7 @@
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMidiOn" value="midiInputOn">
               <label class="form-check-label" for="inputMidiOn">On</label>
-            </div>
+            </div> -->
           </div>
           <div class="col">
             <h2>MIDI Output</h2>
