@@ -1,7 +1,7 @@
 {
   "name": "Button-Switch",
   "productName": "Button Switch",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Control your ATEM and HyperDeck with a USB device",
   "main": "main.js",
   "scripts": {

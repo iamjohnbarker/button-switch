@@ -1515,12 +1515,10 @@ function contollerConnect(e) {
 
 document.getElementById('streamDeckConnect').addEventListener('click', streamDeckConnect);
 
-
-
-const myStreamDeck = new StreamDeck();
-
 // STREAM DECK CONNECT //
 function streamDeckConnect() {
+
+  const myStreamDeck = new StreamDeck();
 
   streamDeckConnectLED.style.backgroundColor = "#5cd65c";
 
@@ -1779,21 +1777,27 @@ input.on('message', function(deltaTime, message) {
 });
 
 // TURN INPUT MIDI ON
-var midiOn = document.getElementById('inputMidiOn').addEventListener ('click', turnMidiOn);
-function turnMidiOn(e) {
-  console.log(inputMidiOn.value);
-  input.getPortCount();
-  input.getPortName(0);
-  input.openPort(0);
-  input.ignoreTypes(false, false, false);
+input.getPortCount();
+console.log(input.getPortCount());
+
+var midiPortCount = input.getPortCount();
+for (var i = 0; i < midiPortCount; i++) {
+  console.log(input.getPortName(i));
+
+  var midiControlleri = document.createElement('option');
+  midiControlleri.text = input.getPortName(i);
+  midiControlleri.setAttribute("value", i);
+  select.appendChild(midiControlleri);
+  document.getElementById('midiSelect').appendChild(midiControlleri);
 };
 
-// TURN INPUT OFF
-var midiOff = document.getElementById('inputMidiOff').addEventListener ('click', turnMidiOff);
-function turnMidiOff(e) {
-  console.log(inputMidiOff.value);
-  input.closePort(0);
-}
+document.getElementById('midiSelect').addEventListener('change', openMidiPort);
+function openMidiPort(e) {
+  console.log(e.target.value);
+  var portNum = parseInt(e.target.value);
+  input.openPort(portNum);
+  input.ignoreTypes(false, false, false);
+};
 
 // MIDI OUTPUT //
 var output = new midi.output();
@@ -1802,8 +1806,7 @@ var output = new midi.output();
 var midiOuputOn = document.getElementById('outputMidiOn').addEventListener ('click', turnOuputMidiOn);
 function turnOuputMidiOn(e) {
   console.log('Output MIDI On');
-  output.openVirtualPort("ATEM USB MIDI OUTPUT");
-
+  output.openVirtualPort("BUTTON SWITCH MIDI OUTPUT");
   output.sendMessage([176,22,1]);
 };
 
