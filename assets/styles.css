@@ -1,50 +1,111 @@
-.content{
-  padding:20px;
+.content {
+	padding: 20px;
 }
-h1{
-  font-size: 20px;
+h1 {
+	font-size: 20px;
 }
-h2{
-  font-size: 15px;
+h2 {
+	font-size: 15px;
 }
-h3{
-  font-size: 13px;
+h3 {
+	font-size: 13px;
 }
-.separator{
-  width: 100%;
-  height: 1px;
-  border-bottom: 1px solid #e4e4e4;
-  margin-top: 20px;
-  margin-bottom: 15px;
+.separator {
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px solid #e4e4e4;
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
-.btn-secondary{
-  background-color: #f4f4f4;
-  border: 1px solid #f6f6f6;
-  color: #606060;
+.btn-secondary {
+	background-color: #f4f4f4;
+	border: 1px solid #f6f6f6;
+	color: #606060;
 }
-.append-midi{
-  margin-left: 10px;
+.gamepad__error {
+	font-size: 14px;
 }
-.streamdeckImage-Body{
-  width:295px;
-  height:195px;
-  padding: 5px;
-  padding-top: 25px;
-  padding-left: 20px;
-  border: #d4d4d4 1px solid;
-  margin-bottom: 25px;
-  border-radius: 6px;
+.streamdeck__error {
+	font-size: 14px;
 }
-.streamdeckImage-ButtonRow{
-  padding-bottom: 26px;
+.append-midi {
+	margin-left: 10px;
 }
-.streamdeckImage-Button{
-  float:left;
-  width:40px;
-  height:40px;
-  margin: 5px;
-  border: #949494 1px solid;
-  text-align: center;
-  border-radius: 6px;
-  padding: 7px;
+.streamdeckImage-Body {
+	width: 295px;
+	height: 195px;
+	padding: 5px;
+	padding-top: 25px;
+	padding-left: 20px;
+	border: #d4d4d4 1px solid;
+	margin-bottom: 25px;
+	border-radius: 6px;
+}
+.streamdeckImage-ButtonRow {
+	padding-bottom: 26px;
+}
+.streamdeckImage-Button {
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+	border: #949494 1px solid;
+	text-align: center;
+	border-radius: 6px;
+	padding: 7px;
+}
+
+.streamdeck-selectors {
+	width: 130px;
+	height: 130px;
+	display: inline-block;
+	margin: 6px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #a2a2a2;
+	border-radius: 10px;
+}
+
+.streamdeck__number {
+	padding-top: 1px;
+	padding-bottom: 6px;
+}
+
+.streamdeck__dropdown {
+	display: inline-block;
+	width: 105px;
+	height: 45px;
+	font-size: 15px;
+	-webkit-appearance: menulist;
+	box-sizing: border-box;
+	align-items: center;
+	white-space: pre;
+	-webkit-rtl-ordering: logical;
+	color: black;
+	background-color: white;
+	cursor: default;
+	border-color: #a2a2a2;
+}
+
+.number-input {
+	display: inline-block;
+	width: 29px;
+	margin-left: -1px;
+	height: 45px;
+	cursor: default;
+	border: #a2a2a2;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a2a2a2;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	text-align: inherit;
+}
+
+.streamdeck__options {
+	margin-bottom: 15px;
+}
+
+.btn-fixed {
+	width: 100%;
 }

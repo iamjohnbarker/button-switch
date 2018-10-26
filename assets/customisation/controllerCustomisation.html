@@ -1,660 +1,664 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles.css">
-    <title>Gamepad Customisation</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand">
-        <img src="../icons/png/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Gamepad customisation
-      </a>
-    </nav>
-    <div class="content">
-      <h2>Custom buttons</h2>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="cbr1">R1</label>
-        </div>
-        <select class="custom-select" id="cbr1">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Gamepad Customisation</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">
+      <img src="../icons/png/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Gamepad customisation
+    </a>
+  </nav>
+  <div class="content">
+    <h2>Custom buttons</h2>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="cbr1">R1</label>
+      </div>
+      <select class="custom-select" id="cbr1">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
           <input id="cbr1-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="cbr2">R2</label>
-        </div>
-        <select class="custom-select" id="cbr2">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cbr2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="cbr1">L1</label>
-        </div>
-        <select class="custom-select" id="cbl1">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cbl1-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="cbl2">L2</label>
-        </div>
-        <select class="custom-select" id="cbl2">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cbl2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">1</label>
-        </div>
-        <select class="custom-select" id="cb1">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cb1-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">2</label>
-        </div>
-        <select class="custom-select" id="cb2">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cb2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">3</label>
-        </div>
-        <select class="custom-select" id="cb3">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cb3-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">4</label>
-        </div>
-        <select class="custom-select" id="cb4">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cb4-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Start</label>
-        </div>
-        <select class="custom-select" id="cbstart">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cbstart-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Select</label>
-        </div>
-        <select class="custom-select" id="cbselect">
-          <option class="disabled" value="disabled">Disabled</option>
-          <optgroup label="ATEM Transition">
-            <option class="atemCut" value="1">Cut</option>
-            <option class="atemAuto" value="2">Auto</option>
-          </optgroup>
-          <optgroup label="ATEM Preview">
-            <option class="atemPreview" value="1">Preview Input 1</option>
-            <option class="atemPreview" value="2">Preview Input 2</option>
-            <option class="atemPreview" value="3">Preview Input 3</option>
-            <option class="atemPreview" value="4">Preview Input 4</option>
-            <option class="atemPreview" value="5">Preview Input 5</option>
-            <option class="atemPreview" value="6">Preview Input 6</option>
-            <option class="atemPreview" value="7">Preview Input 7</option>
-            <option class="atemPreview" value="8">Preview Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Program">
-            <option class="atemProgram" value="1">Program Input 1</option>
-            <option class="atemProgram" value="2">Program Input 2</option>
-            <option class="atemProgram" value="3">Program Input 3</option>
-            <option class="atemProgram" value="4">Program Input 4</option>
-            <option class="atemProgram" value="5">Program Input 5</option>
-            <option class="atemProgram" value="6">Program Input 6</option>
-            <option class="atemProgram" value="7">Program Input 7</option>
-            <option class="atemProgram" value="8">Program Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Aux">
-            <option class="atemAux" value="1">Aux Input 1</option>
-            <option class="atemAux" value="2">Aux Input 2</option>
-            <option class="atemAux" value="3">Aux Input 3</option>
-            <option class="atemAux" value="4">Aux Input 4</option>
-            <option class="atemAux" value="5">Aux Input 5</option>
-            <option class="atemAux" value="6">Aux Input 6</option>
-            <option class="atemAux" value="7">Aux Input 7</option>
-            <option class="atemAux" value="8">Aux Input 8</option>
-          </optgroup>
-          <optgroup label="ATEM Macros">
-            <option class="atemMacroRun" value="0">Run Macro 1</option>
-            <option class="atemMacroRun" value="1">Run Macro 2</option>
-            <option class="atemMacroRun" value="2">Run Macro 3</option>
-            <option class="atemMacroRun" value="3">Run Macro 4</option>
-            <option class="atemMacroRun" value="4">Run Macro 5</option>
-            <option class="atemMacroRun" value="5">Run Macro 6</option>
-            <option class="atemMacroRun" value="6">Run Macro 7</option>
-            <option class="atemMacroRun" value="7">Run Macro 8</option>
-          </optgroup>
-          <optgroup label="HyperDeck">
-            <option class="hyperdeckRec" value="0">Record Start/Stop</option>
-            <option class="hyperdeckMark" value="1">Mark</option>
-            <option class="hyperdeckPlay" value="2">Play</option>
-            <option class="hyperdeckStop" value="3">Stop</option>
-            <option class="hyperdeckPrevious" value="4">Previous Clip</option>
-            <option class="hyperdeckNext" value="5">Next Clip</option>
-          </optgroup>
-        </select>
-        <div class="input-group-append append-midi">
-          <input id="cbselect-midi" type="text" class="form-control" placeholder="MIDI Output Note">
-        </div>
-      </div>
-
-
-
+        </div> -->
     </div>
-  </body>
-  <script>
-    require('./controllerCustomisation.js');
-  </script>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="cbr2">R2</label>
+      </div>
+      <select class="custom-select" id="cbr2">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cbr2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="cbr1">L1</label>
+      </div>
+      <select class="custom-select" id="cbl1">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cbl1-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="cbl2">L2</label>
+      </div>
+      <select class="custom-select" id="cbl2">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cbl2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">1 / ▢</label>
+      </div>
+      <select class="custom-select" id="cb1">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cb1-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">2 / X</label>
+      </div>
+      <select class="custom-select" id="cb2">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cb2-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">3 / ○</label>
+      </div>
+      <select class="custom-select" id="cb3">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cb3-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">4 / △</label>
+      </div>
+      <select class="custom-select" id="cb4">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cb4-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Start / Options</label>
+      </div>
+      <select class="custom-select" id="cbstart">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cbstart-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Select / Share</label>
+      </div>
+      <select class="custom-select" id="cbselect">
+        <option class="disabled" value="disabled">Disabled</option>
+        <optgroup label="ATEM Transition">
+          <option class="atemCut" value="1">Cut</option>
+          <option class="atemAuto" value="2">Auto</option>
+        </optgroup>
+        <optgroup label="ATEM Preview">
+          <option class="atemPreview" value="1">Preview Input 1</option>
+          <option class="atemPreview" value="2">Preview Input 2</option>
+          <option class="atemPreview" value="3">Preview Input 3</option>
+          <option class="atemPreview" value="4">Preview Input 4</option>
+          <option class="atemPreview" value="5">Preview Input 5</option>
+          <option class="atemPreview" value="6">Preview Input 6</option>
+          <option class="atemPreview" value="7">Preview Input 7</option>
+          <option class="atemPreview" value="8">Preview Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Program">
+          <option class="atemProgram" value="1">Program Input 1</option>
+          <option class="atemProgram" value="2">Program Input 2</option>
+          <option class="atemProgram" value="3">Program Input 3</option>
+          <option class="atemProgram" value="4">Program Input 4</option>
+          <option class="atemProgram" value="5">Program Input 5</option>
+          <option class="atemProgram" value="6">Program Input 6</option>
+          <option class="atemProgram" value="7">Program Input 7</option>
+          <option class="atemProgram" value="8">Program Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Aux">
+          <option class="atemAux" value="1">Aux Input 1</option>
+          <option class="atemAux" value="2">Aux Input 2</option>
+          <option class="atemAux" value="3">Aux Input 3</option>
+          <option class="atemAux" value="4">Aux Input 4</option>
+          <option class="atemAux" value="5">Aux Input 5</option>
+          <option class="atemAux" value="6">Aux Input 6</option>
+          <option class="atemAux" value="7">Aux Input 7</option>
+          <option class="atemAux" value="8">Aux Input 8</option>
+        </optgroup>
+        <optgroup label="ATEM Macros">
+          <option class="atemMacroRun" value="0">Run Macro 1</option>
+          <option class="atemMacroRun" value="1">Run Macro 2</option>
+          <option class="atemMacroRun" value="2">Run Macro 3</option>
+          <option class="atemMacroRun" value="3">Run Macro 4</option>
+          <option class="atemMacroRun" value="4">Run Macro 5</option>
+          <option class="atemMacroRun" value="5">Run Macro 6</option>
+          <option class="atemMacroRun" value="6">Run Macro 7</option>
+          <option class="atemMacroRun" value="7">Run Macro 8</option>
+        </optgroup>
+        <optgroup label="HyperDeck">
+          <option class="hyperdeckRec" value="0">Record Start/Stop</option>
+          <option class="hyperdeckMark" value="1">Mark</option>
+          <option class="hyperdeckPlay" value="2">Play</option>
+          <option class="hyperdeckStop" value="3">Stop</option>
+          <option class="hyperdeckPrevious" value="4">Previous Clip</option>
+          <option class="hyperdeckNext" value="5">Next Clip</option>
+        </optgroup>
+      </select>
+      <!-- <div class="input-group-append append-midi">
+        <input id="cbselect-midi" type="text" class="form-control" placeholder="MIDI Output Note">
+      </div> -->
+    </div>
+
+
+
+  </div>
+</body>
+<script>
+  require('./controllerCustomisation.js');
+</script>
+
 </html>
