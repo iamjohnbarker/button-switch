@@ -1,5 +1,3 @@
-// const streamdeck = require("./streamdeck");
-
 const change = tallys => {
 	const tallyOne = document.getElementById("tallyOne");
 	const tallyTwo = document.getElementById("tallyTwo");

@@ -1,7 +1,7 @@
 {
 	"name": "button-switch",
 	"productName": "Button Switch",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Control your ATEM and HyperDeck with a USB device",
 	"main": "main.js",
 	"scripts": {
@@ -15,11 +15,13 @@
 	"dependencies": {
 		"applest-atem": "^0.2.4",
 		"chokidar": "^2.0.4",
+		"electron-config": "^2.0.0",
 		"electron-json-storage": "^4.1.4",
 		"electron-unhandled": "^1.1.0",
 		"elgato-stream-deck": "^2.1.1",
 		"homedir": "^0.6.0",
 		"hyperdeck-js-lib": "^1.6.0",
+		"midi": "^0.9.5",
 		"node-gamepad": "^0.1.15",
 		"object-change": "0.0.11",
 		"prebuild-install": "^5.2.1"

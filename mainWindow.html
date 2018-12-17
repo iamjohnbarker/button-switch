@@ -1,208 +1,306 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<title>Button Switch</title>
+	</head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/styles.css">
-  <title>Button Switch</title>
-</head>
+	<body>
+		<nav class="navbar navbar-dark bg-light">
+			<a class="navbar-brand">
+				<img
+					src="./assets/icons/png/icon.png"
+					width="30"
+					height="30"
+					class="d-inline-block align-top"
+					alt=""
+				/>
+				Button Switch
+			</a>
+		</nav>
 
-<body>
+		<div class="content">
+			<div class="atem">
+				<h2>ATEM Switcher IP address</h2>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span
+							id="atemConnectionLED"
+							class="input-group-text"
+							id="inputGroup-sizing-default"
+						></span>
+					</div>
+					<input
+						type="text"
+						id="atemIPAddress"
+						value=""
+						placeholder="192.168.x.x"
+						class="form-control"
+						aria-label="Default"
+						aria-describedby="inputGroup-sizing-default"
+					/>
+					<div class="input-group-append">
+						<button
+							id="ipAddressBtn"
+							class="btn btn-outline-secondary"
+							type="button"
+						>
+							Connect
+						</button>
+					</div>
+				</div>
+				<div id="tally__atem">
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button" id="tallyOne" class="btn btn-light">1</button>
+						<button type="button" id="tallyTwo" class="btn btn-light">2</button>
+						<button type="button" id="tallyThree" class="btn btn-light">
+							3
+						</button>
+						<button type="button" id="tallyFour" class="btn btn-light">
+							4
+						</button>
+						<button type="button" id="tallyFive" class="btn btn-light">
+							5
+						</button>
+						<button type="button" id="tallySix" class="btn btn-light">6</button>
+						<button type="button" id="tallySeven" class="btn btn-light">
+							7
+						</button>
+						<button type="button" id="tallyEight" class="btn btn-light">
+							8
+						</button>
+					</div>
+					<div class="btn-group mr-2" role="group" aria-label="Second group">
+						<button type="button" id="tallyCut" class="btn btn-light">
+							Cut
+						</button>
+						<button type="button" id="tallyAuto" class="btn btn-light">
+							Auto
+						</button>
+					</div>
+				</div>
+			</div>
 
+			<div class="separator"></div>
 
-  <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">
-      <img src="./assets/icons/png/icon.png" width="30" height="30" class="d-inline-block align-top" alt=""> Button
-      Switch
-    </a>
-  </nav>
+			<div class="hyperdeck">
+				<h2>HyperDeck IP address</h2>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span
+							id="hyperdeckConnectionLED"
+							class="input-group-text"
+							id="inputGroup-sizing-default"
+						></span>
+					</div>
+					<input
+						type="text"
+						id="ipAddressInputHyperDeck"
+						value=""
+						placeholder="192.168.x.x"
+						class="form-control"
+						aria-label="Default"
+						aria-describedby="inputGroup-sizing-default"
+					/>
+					<div class="input-group-append">
+						<button
+							id="ipAddressBtnHyperDeck"
+							class="btn btn-outline-secondary"
+							type="button"
+						>
+							Connect
+						</button>
+					</div>
+				</div>
+				<div id="tally__hyperdeck">
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button" id="tallyRecord" class="btn btn-light">
+							●
+						</button>
+						<button type="button" id="tallyPlay" class="btn btn-light">
+							▶
+						</button>
+						<button type="button" id="tallyStop" class="btn btn-light">
+							■
+						</button>
+						<button type="button" id="tallyPrevClip" class="btn btn-light">
+							◀◀
+						</button>
+						<button type="button" id="tallyNextClip" class="btn btn-light">
+							▶▶
+						</button>
 
+						<!--
+							<button type="button" id="tallyMark" class="btn btn-light">Mark</button>
+						-->
+					</div>
+				</div>
+			</div>
 
-  <div class="content">
+			<!--
+				<div class="">
+				  <div class="input-group mb-3">
+				    <input type="text" id="recordingRecordingName" value="" placeholder="Name of recording" class="form-control"
+				      aria-label="Default" aria-describedby="inputGroup-sizing-default">
+				    <div class="input-group-append">
+				      <button id="recordingNameSet" class="btn btn-outline-secondary" type="button">Save</button>
+				    </div>
+				  </div>
+				</div>
+			-->
 
+			<div class="separator"></div>
 
-    <div class="atem">
-      <h2>ATEM Switcher IP address</h2>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span id="atemConnectionLED" class="input-group-text" id="inputGroup-sizing-default"></span>
-        </div>
-        <input type="text" id="atemIPAddress" value="" placeholder="192.168.x.x" class="form-control" aria-label="Default"
-          aria-describedby="inputGroup-sizing-default">
-        <div class="input-group-append">
-          <button id="ipAddressBtn" class="btn btn-outline-secondary" type="button">Connect</button>
-        </div>
-      </div>
-      <div id='tally__atem'>
-        <div class="btn-group" role="group" aria-label="First group">
-          <button type="button" id="tallyOne" class="btn btn-light">1</button>
-          <button type="button" id="tallyTwo" class="btn btn-light">2</button>
-          <button type="button" id="tallyThree" class="btn btn-light">3</button>
-          <button type="button" id="tallyFour" class="btn btn-light">4</button>
-          <button type="button" id="tallyFive" class="btn btn-light">5</button>
-          <button type="button" id="tallySix" class="btn btn-light">6</button>
-          <button type="button" id="tallySeven" class="btn btn-light">7</button>
-          <button type="button" id="tallyEight" class="btn btn-light">8</button>
-        </div>
-        <div class="btn-group mr-2" role="group" aria-label="Second group">
-          <button type="button" id="tallyCut" class="btn btn-light">Cut</button>
-          <button type="button" id="tallyAuto" class="btn btn-light">Auto</button>
-        </div>
-      </div>
-    </div>
+			<div class="controller">
+				<div class="row">
+					<div class="col-6">
+						<h2>Gamepad</h2>
+						<div class="input-group mb-4">
+							<div class="input-group-prepend">
+								<label
+									id="controllerConnectionLED"
+									class="input-group-text"
+									for="inputGroupSelect01"
+								></label>
+							</div>
+							<select class="custom-select" id="controllerSelect">
+								<option selected value="none/none">Choose...</option>
+								<option value="logitech/rumblepad2">RumblePad 2</option>
+								<!--
+									<option value="logitech/gamepadf310">Gamepad F310</option>
+								-->
+								<option value="ps4/dualshock4">Dualshock 4</option>
+							</select>
+							<div class="input-group-append">
+								<button
+									id="gamepadConfigure"
+									class="btn btn-outline-secondary"
+									type="button"
+								>
+									Configure
+								</button>
+							</div>
+						</div>
+						<span id="gamepad__error" class="gamepad__error"></span>
+					</div>
+					<div class="col-5">
+						<h2>Stream Deck</h2>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span id="streamDeckConnectLED" class="input-group-text"></span>
+							</div>
+							<div class="input-group-append">
+								<button
+									id="streamDeckConnect"
+									class="btn btn-outline-secondary"
+									type="button"
+								>
+									Connect
+								</button>
+							</div>
+							<div class="input-group-append">
+								<button
+									id="streamDeckConfigure"
+									class="btn btn-outline-secondary"
+									type="button"
+								>
+									Configure
+								</button>
+							</div>
+						</div>
+						<span id="streamdeck__error" class="streamdeck__error"></span>
+					</div>
+				</div>
+			</div>
 
-    <div class="separator"></div>
+			<div class="separator"></div>
 
-    <div class="hyperdeck">
-      <h2>HyperDeck IP address</h2>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span id="hyperdeckConnectionLED" class="input-group-text" id="inputGroup-sizing-default"></span>
-        </div>
-        <input type="text" id="ipAddressInputHyperDeck" value="" placeholder="192.168.x.x" class="form-control"
-          aria-label="Default" aria-describedby="inputGroup-sizing-default">
-        <div class="input-group-append">
-          <button id="ipAddressBtnHyperDeck" class="btn btn-outline-secondary" type="button">Connect</button>
-        </div>
-      </div>
-      <div id='tally__hyperdeck'>
-        <div class="btn-group" role="group" aria-label="First group">
-          <button type="button" id="tallyRecord" class="btn btn-light">●</button>
-          <button type="button" id="tallyPlay" class="btn btn-light">▶</button>
-          <button type="button" id="tallyStop" class="btn btn-light">■</button>
-          <button type="button" id="tallyPrevClip" class="btn btn-light">◀◀</button>
-          <button type="button" id="tallyNextClip" class="btn btn-light">▶▶</button>
-
-          <!-- <button type="button" id="tallyMark" class="btn btn-light">Mark</button> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- 
-      
-          <div class="">
-            <div class="input-group mb-3">
-              <input type="text" id="recordingRecordingName" value="" placeholder="Name of recording" class="form-control"
-                aria-label="Default" aria-describedby="inputGroup-sizing-default">
-              <div class="input-group-append">
-                <button id="recordingNameSet" class="btn btn-outline-secondary" type="button">Save</button>
-              </div>
-            </div>
+			<div class="row">
+				<div class="col-6">
+					<h2>Choose your MIDI device</h2>
+					<div class="input-group mb-4">
+						<div class="input-group-prepend">
+							<label
+								id="midiConnectionLED"
+								class="input-group-text"
+								for="inputGroupSelect01"
+							></label>
+						</div>
+						<select class="custom-select" id="midiSelect">
+							<option selected value="none/none">Choose...</option>
+						</select>
           </div>
-      
-        -->
-
-    <div class="separator"></div>
-
-    <div class="controller">
-      <div class="row">
-        <div class="col-6">
-          <h2>Gamepad</h2>
-          <div class="input-group mb-4">
-            <div class="input-group-prepend">
-              <label id="controllerConnectionLED" class="input-group-text" for="inputGroupSelect01"></label>
-            </div>
-            <select class="custom-select" id="controllerSelect">
-              <option selected value="none/none">Choose...</option>
-              <option value="logitech/rumblepad2">RumblePad 2</option>
-              <!-- <option value="logitech/gamepadf310">Gamepad F310</option> -->
-              <option value="ps4/dualshock4">Dualshock 4</option>
-            </select>
-            <div class="input-group-append">
-              <button id="gamepadConfigure" class="btn btn-outline-secondary" type="button">Configure</button>
-            </div>
-          </div>
-          <span id="gamepad__error" class="gamepad__error"></span>
-        </div>
-        <div class="col-5">
-          <h2>Stream Deck</h2>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span id="streamDeckConnectLED" class="input-group-text"></span>
-            </div>
-            <div class="input-group-append">
-              <button id="streamDeckConnect" class="btn btn-outline-secondary" type="button">Connect</button>
-            </div>
-            <div class="input-group-append">
-              <button id="streamDeckConfigure" class="btn btn-outline-secondary" type="button">Configure</button>
-            </div>
-          </div>
-          <span id="streamdeck__error" class="streamdeck__error"></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="separator"></div>
-
-    <!-- 
-      
-          <div class="row">
-            <div class="col-6">
-      
-              <h2>Choose your MIDI device</h2>
-              <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                  <label id="midiConnectionLED" class="input-group-text" for="inputGroupSelect01"></label>
-                </div>
-                <select class="custom-select" id="midiSelect">
-                  <option selected value="none/none">Choose...</option>
-                </select>
-              </div>
-      
-      
-              <h2>MIDI Input</h2>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMidiOff" value="midiInputOff"
-                  checked>
-                <label class="form-check-label" for="inputMidiOff">Off</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inputMidiOn" value="midiInputOn">
-                <label class="form-check-label" for="inputMidiOn">On</label>
-              </div>
-            </div>
-            <div class="col">
-              <h2>MIDI Output</h2>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions-2" id="outputMidiOff" value="midiOutputOff"
-                  checked>
-                <label class="form-check-label" for="outputMidiOff">Off</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions-2" id="outputMidiOn" value="midiOutputOn">
-                <label class="form-check-label" for="outputMidiOn">On</label>
-              </div>
-            </div>
-          </div>
-      
-          <div class="separator"></div>
-      
-      
-      
-      
           
-      
-      
-            <div style="display:none">
-              <h2>Markers</h2>
-              <div class="showMarkers">
-                <ul id="addMarkers">
-                </ul>
-              </div>
-            </div>
-      
-          -->
+<!--
 
-  </div>
+          <h2>MIDI Input</h2>
+          
+					<div class="form-check form-check-inline">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="inlineRadioOptions"
+							id="inputMidiOff"
+							value="midiInputOff"
+							checked
+						/>
+						<label class="form-check-label" for="inputMidiOff">Off</label>
+          </div>
+          
+					<div class="form-check form-check-inline">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="inlineRadioOptions"
+							id="inputMidiOn"
+							value="midiInputOn"
+						/>
+						<label class="form-check-label" for="inputMidiOn">On</label>
+					</div>
+				</div>
+				
+					  <div class="col">
+					    <h2>MIDI Output</h2>
+					    <div class="form-check form-check-inline">
+					      <input class="form-check-input" type="radio" name="inlineRadioOptions-2" id="outputMidiOff" value="midiOutputOff"
+					        checked>
+					      <label class="form-check-label" for="outputMidiOff">Off</label>
+					    </div>
+					    <div class="form-check form-check-inline">
+					      <input class="form-check-input" type="radio" name="inlineRadioOptions-2" id="outputMidiOn" value="midiOutputOn">
+					      <label class="form-check-label" for="outputMidiOn">On</label>
+					    </div>
+					  </div>
+					</div>
 
-  </div>
+					<div class="separator"></div>
 
 
-</body>
-<script>
-  require('./mainWindow.js');
-</script>
 
+
+
+
+
+					  <div style="display:none">
+					    <h2>Markers</h2>
+					    <div class="showMarkers">
+					      <ul id="addMarkers">
+					      </ul>
+					    </div>
+					  </div>
+				-->
+			</div>
+		</div>
+	</body>
+	<script>
+		require("./mainWindow.js");
+		require("./functionality/midi-input.js");
+	</script>
 </html>

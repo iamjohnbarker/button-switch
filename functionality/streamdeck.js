@@ -3,22 +3,24 @@ const { ipcRenderer } = require("electron");
 const storage = require("electron-json-storage");
 const path = require("path");
 const fs = require("fs");
+const chokidar = require("chokidar");
+const dataPath = storage.getDataPath();
 
 const atem = require("./atem");
 const hyperdeck = require("./hyperdeck");
-// const tally = require("./tally");
-
-const chokidar = require("chokidar");
-
-const dataPath = storage.getDataPath();
-// console.log(dataPath);
 
 // STREAM DECK CONNECT //
+
+let myStreamDeck;
+
+ipcRenderer.on("streamdeck-reboot", (event, arg) => {
+	images();
+});
 
 const connect = () => {
 	streamDeckConnectLED.style.backgroundColor = "#ff4d4d";
 
-	const myStreamDeck = new StreamDeck();
+	myStreamDeck = new StreamDeck();
 
 	streamDeckConnectLED.style.backgroundColor = "#5cd65c";
 	document.getElementById("streamdeck__error").innerText = "";
@@ -30,7 +32,7 @@ const connect = () => {
 		.on("all", (event, path) => {
 			storage.get("tallys", function(error, data) {
 				if (error) throw error;
-				tally(myStreamDeck, data.tallys);
+				tally(data.tallys);
 			});
 		});
 	chokidar
@@ -38,7 +40,7 @@ const connect = () => {
 		.on("all", (event, path) => {
 			storage.get("hyperdeck", function(error, data) {
 				if (error) throw error;
-				hyperdeckStatus(myStreamDeck, data.status);
+				hyperdeckStatus(data.status);
 			});
 		});
 
@@ -90,158 +92,136 @@ const connect = () => {
 		});
 	});
 
-	images(myStreamDeck);
+	images();
 };
 
-const images = myStreamDeck => {
-	ipcRenderer.on("streamdeck-reboot", (event, arg) => {
-		images(myStreamDeck);
-	});
+const images = () => {
 	// ALL STREAM DECK BUTTON IMAGES
 	for (var i = 0; i < 15; i++) {
 		storage.get("sd" + i + "-button", function(error, data) {
 			if (error) throw error;
 			var sd = data.name - 1 + 1;
 			if (data.class == "disabled") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/clear.png")
+				);
 			} else if (data.class == "atemCut") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/cut-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/cut-clear.png")
+				);
 			} else if (data.class == "atemAuto") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/auto-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/auto-clear.png")
+				);
 			} else if (data.class == "atemPreview") {
-				// for (let l = 1; l < 8; l++) {
-				// 	console.log(data.value);
-				// }
 				const url = `../assets/stream-deck/${data.value}-clear.png`;
-				myStreamDeck
-					.fillImageFromFile(sd, path.resolve(__dirname, url))
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
 			} else if (data.class == "atemAux") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(
-							__dirname,
-							"../assets/stream-deck/" + data.value + "-clear.png"
-						)
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(
+						__dirname,
+						"../assets/stream-deck/" + data.value + "-clear.png"
 					)
-					.then(() => {});
+				);
 			} else if (data.class == "atemMacroRun") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(
-							__dirname,
-							"../assets/stream-deck/" + data.value + "-macro-clear.png"
-						)
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(
+						__dirname,
+						"../assets/stream-deck/" + data.value + "-macro-clear.png"
 					)
-					.then(() => {});
+				);
 			} else if (data.class == "hyperdeckRec") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/rec-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/rec-clear.png")
+				);
 			} else if (data.class == "hyperdeckMark") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/mark-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/mark-clear.png")
+				);
 			} else if (data.class == "hyperdeckPlay") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/play-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/play-clear.png")
+				);
 			} else if (data.class == "hyperdeckStop") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/stop-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/stop-clear.png")
+				);
 			} else if (data.class == "hyperdeckNext") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/forward-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/forward-clear.png")
+				);
 			} else if (data.class == "hyperdeckPrevious") {
-				myStreamDeck
-					.fillImageFromFile(
-						sd,
-						path.resolve(__dirname, "../assets/stream-deck/back-clear.png")
-					)
-					.then(() => {});
+				myStreamDeck.fillImageFromFile(
+					sd,
+					path.resolve(__dirname, "../assets/stream-deck/back-clear.png")
+				);
 			}
 		});
 	}
 };
 
-const tally = (myStreamDeck, tallys) => {
-	for (var i = 0; i < 15; i++) {
-		storage.get("sd" + i + "-button", function(error, data) {
-			if (error) throw error;
-			var sd = data.name - 1 + 1;
-			if (data.class == "atemPreview") {
-				let valuePlus = parseInt(data.value) - 1;
-				let valueString = valuePlus.toString();
-				if (tallys[valueString] == 0) {
-					const url = `../assets/stream-deck/${data.value}-clear.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 1) {
-					const url = `../assets/stream-deck/${data.value}-red.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 2) {
-					const url = `../assets/stream-deck/${data.value}-green.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 3) {
-					const url = `../assets/stream-deck/${data.value}-red.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				}
+const tally = tallys => {
+	tallys.forEach((tallyStatus, index) => {
+		const indexPlus = index + 1;
+		if (tallyStatus != 0) {
+			console.log("position", indexPlus);
+			console.log("tallyStatus", tallyStatus);
+
+			for (var i = 0; i < 15; i++) {
+				storage.get("sd" + i + "-button", function(error, data) {
+					if (error) throw error;
+					var sd = data.name - 1 + 1;
+					if (data.class == "atemPreview") {
+						let valuePlus = parseInt(data.value) - 1;
+						let valueString = valuePlus.toString();
+						if (tallys[valueString] == 0) {
+							const url = `../assets/stream-deck/${data.value}-clear.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 1) {
+							const url = `../assets/stream-deck/${data.value}-red.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 2) {
+							const url = `../assets/stream-deck/${data.value}-green.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 3) {
+							const url = `../assets/stream-deck/${data.value}-red.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						}
+					}
+					if (data.class == "atemProgram") {
+						let valuePlus = parseInt(data.value) - 1;
+						let valueString = valuePlus.toString();
+						if (tallys[valueString] == 0) {
+							const url = `../assets/stream-deck/${data.value}-clear.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 1) {
+							const url = `../assets/stream-deck/${data.value}-red.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 2) {
+							const url = `../assets/stream-deck/${data.value}-clear.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						} else if (tallys[valueString] == 3) {
+							const url = `../assets/stream-deck/${data.value}-red.png`;
+							myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
+						}
+					}
+				});
 			}
-			if (data.class == "atemProgram") {
-				let valuePlus = parseInt(data.value) - 1;
-				let valueString = valuePlus.toString();
-				if (tallys[valueString] == 0) {
-					const url = `../assets/stream-deck/${data.value}-clear.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 1) {
-					const url = `../assets/stream-deck/${data.value}-red.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 2) {
-					const url = `../assets/stream-deck/${data.value}-clear.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				} else if (tallys[valueString] == 3) {
-					const url = `../assets/stream-deck/${data.value}-red.png`;
-					myStreamDeck.fillImageFromFile(sd, path.resolve(__dirname, url));
-				}
-			}
-		});
-	}
+		}
+	});
 };
 
-const hyperdeckStatus = (myStreamDeck, status) => {
+const hyperdeckStatus = status => {
 	for (var i = 0; i < 15; i++) {
 		storage.get("sd" + i + "-button", function(error, data) {
 			if (error) throw error;
