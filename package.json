@@ -1,32 +1,65 @@
 {
 	"name": "button-switch",
-	"productName": "Button Switch",
-	"version": "0.0.5",
-	"description": "Control your ATEM and HyperDeck with a USB device",
-	"main": "main.js",
+	"productName": "button-switch",
+	"version": "1.0.0",
+	"description": "My Electron application description",
+	"main": "src/index.js",
 	"scripts": {
-		"start": "electron .",
-		"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds --ignore=releases",
-		"package-win": "electron-packager . Button-Switch --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Button Switch\"",
-		"package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "eslint src --color"
 	},
-	"author": "john barker",
+	"keywords": [],
+	"author": "johnbarker",
 	"license": "MIT",
+	"config": {
+		"forge": {
+			"make_targets": {
+				"win32": [
+					"squirrel"
+				],
+				"darwin": [
+					"zip"
+				],
+				"linux": [
+					"deb",
+					"rpm"
+				]
+			},
+			"electronPackagerConfig": {
+				"packageManager": "yarn"
+			},
+			"electronWinstallerConfig": {
+				"name": "button_switch"
+			},
+			"electronInstallerDebian": {},
+			"electronInstallerRedhat": {},
+			"github_repository": {
+				"owner": "",
+				"name": ""
+			},
+			"windowsStoreConfig": {
+				"packageName": "",
+				"name": "buttonswitch"
+			}
+		}
+	},
 	"dependencies": {
-		"applest-atem": "^0.2.4",
-		"chokidar": "^2.0.4",
-		"electron-json-storage": "^4.1.4",
-		"electron-unhandled": "^1.1.0",
-		"elgato-stream-deck": "^2.1.1",
-		"homedir": "^0.6.0",
-		"hyperdeck-js-lib": "^1.6.0",
-		"node-gamepad": "^0.1.15",
-		"object-change": "0.0.11",
-		"prebuild-install": "^5.2.1"
+		"electron-compile": "^6.4.3",
+		"electron-squirrel-startup": "^1.0.0"
 	},
 	"devDependencies": {
-		"electron": "^1.8.8",
-		"electron-packager": "^12.2.0",
-		"packager": "0.0.4"
+		"babel-plugin-transform-async-to-generator": "^6.24.1",
+		"babel-preset-env": "^1.7.0",
+		"babel-preset-react": "^6.24.1",
+		"electron-forge": "^5.2.3",
+		"electron-prebuilt-compile": "3.0.10",
+		"eslint": "^3",
+		"eslint-config-airbnb": "^15",
+		"eslint-plugin-import": "^2",
+		"eslint-plugin-jsx-a11y": "^5",
+		"eslint-plugin-react": "^7"
 	}
 }
