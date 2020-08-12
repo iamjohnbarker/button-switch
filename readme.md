@@ -1,4 +1,4 @@
-# Button Switch
+# H2R Buttons (AKA Button Switch)
 ## Control your ATEM and HyperDeck with a USB device
 ![Button Switch in action](https://github.com/iamjohnbarker/button-switch/raw/master/button-switch-interface.png)
 
